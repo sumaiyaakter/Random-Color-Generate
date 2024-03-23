@@ -1,0 +1,38 @@
+body {
+  height: 100vh;
+}
+
+.block {
+  height: 100%;
+}
+
+.btn {
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 40px;
+  border: 0;
+}
+
+.block h2 {
+  text-transform: capitalize;
+  background-color: #ffa500;
+  padding: 10px 50px;
+  margin: 26px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button.btn:hover,
+button.btn:focus,
+:not(.btn-check)+.btn:active {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.copy {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+}

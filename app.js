@@ -1,17 +1,29 @@
-const titleOne = document.querySelector('.block h1');
-const titleTwo = document.querySelector('.block h2');
-const currentColor = document.querySelector('.block h2 span');
+const titleOne = document.querySelector(".block h1");
+const titleTwo = document.querySelector(".block h2");
+const currentColor = document.querySelector(".block .color");
 const btn = document.querySelector('.btn');
 
-const colorList = ['#333333', '#000000', '#272822','#303FBF', '#272822', '#228B22', '#3EB489', '#40E0D0','#1B4D3E'];
 
-// box.style.backgroundColor = color[0];
-btn.addEventListener('click', () => {
-  const rand = Math.floor(Math.random() * colorList.length);
-  document.body.style.backgroundColor = colorList[rand];
+function generateColor() {
+  const hexCode = "abcdef0123456789";
+  const arrConvert = hexCode.split("");
+  let hash = "#";
 
-  currentColor.textContent = colorList[rand];
+  for (let i = 0; i < 6; i++) {
+    const num = Math.round(Math.random() * 15);
+    const numTwo = arrConvert[num];
+     hash += numTwo;
+  }
+  return hash;
+}
+btn.addEventListener("click", () => {
+  titleOne.style.color = '#ffffff';
+  titleTwo.style.color = '#ffffff';
+  
+  const randomColor = generateColor();
+  document.body.style.backgroundColor = randomColor;
+  currentColor.style.color = randomColor;
+  currentColor.textContent = randomColor;
+  
+});
 
-  titleOne.style.color = '#fff';
-  titleTwo.style.color = '#fff';
-})
