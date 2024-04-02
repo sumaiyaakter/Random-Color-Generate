@@ -15,13 +15,7 @@ body {
 }
 
 .block h2 {
-  text-transform: capitalize;
   background-color: #ffa500;
-  padding: 10px 50px;
-  margin: 26px 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 button.btn:hover,
@@ -32,7 +26,5 @@ button.btn:focus,
 }
 
 .copy {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 15px;
+  color: #000000;
 }
