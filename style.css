@@ -14,6 +14,10 @@ body {
   border: 0;
 }
 
+.block {
+  height: 100vh;
+}
+
 .block h2 {
   background-color: #ffa500;
 }
@@ -29,14 +33,15 @@ button.btn:focus,
   color: #000000;
   position: relative;
 }
+
 .copy.active::before {
   position: absolute;
   content: "Copied";
   width: 70px;
   height: 24px;
-  left: 75px;
-  top: -1px;
-  background-color: black;
+  left: 0;
+  top: 40px;
+  background-color: #ff0000;
   color: white;
   font-size: 14px;
   padding: 3px 12px;
