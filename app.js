@@ -2,7 +2,7 @@ const titleOne = document.querySelector(".block h1");
 const titleTwo = document.querySelector(".block h2");
 const currentColor = document.querySelector(".block .color");
 const colorCopy = document.querySelector(".block .copy");
-const btn = document.querySelector('.btn');
+const btn = document.querySelector(".btn");
 
 const isFirstClick = true;
 
@@ -14,24 +14,29 @@ function generateColor() {
   for (let i = 0; i < 6; i++) {
     const num = Math.round(Math.random() * 15);
     const numTwo = arrConvert[num];
-     hash += numTwo;
+    hash += numTwo;
   }
   return hash;
 }
 
 btn.addEventListener("click", () => {
-  titleOne.style.color = '#ffffff';
-  titleTwo.style.color = '#ffffff';
-  colorCopy.style.color = '#ffffff';
-  
+  titleOne.style.color = "#ffffff";
+  titleTwo.style.color = "#ffffff";
+  colorCopy.style.color = "#ffffff";
+
   const randomColor = generateColor();
   document.body.style.backgroundColor = randomColor;
   currentColor.style.color = randomColor;
   currentColor.textContent = randomColor;
-
 });
 
-colorCopy.addEventListener('click', () => {
+// copy color code
+colorCopy.addEventListener("click", () => {
+  colorCopy.classList.add("active");
+  setTimeout(function () {
+    colorCopy.classList.remove("active");
+  }, 1500);
+
   if (isFirstClick) {
     navigator.clipboard.writeText(currentColor.innerText);
     isFirstClick = false;
@@ -39,5 +44,3 @@ colorCopy.addEventListener('click', () => {
     navigator.clipboard.writeText(currentColor.textContent);
   }
 });
-
-

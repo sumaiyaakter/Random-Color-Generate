@@ -27,4 +27,18 @@ button.btn:focus,
 
 .copy {
   color: #000000;
+  position: relative;
+}
+.copy.active::before {
+  position: absolute;
+  content: "Copied";
+  width: 70px;
+  height: 24px;
+  left: 75px;
+  top: -1px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  padding: 3px 12px;
+  border-radius: 5px;
 }
